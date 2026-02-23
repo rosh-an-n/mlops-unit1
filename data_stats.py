@@ -44,6 +44,15 @@ def print_basic_stats(df, target_names):
     # Missing values
     print(f"\n❓ Missing Values: {df.isnull().sum().sum()}")
 
+    # Correlation matrix (experiment-v1 feature)
+    print("\n🔗 Feature Correlation Matrix:")
+    print(df.drop(columns=["target"]).corr().round(2).to_string())
+
+    # Min/Max summary per feature
+    print("\n📈 Min/Max Summary:")
+    for col in df.columns[:-1]:
+        print(f"   - {col}: min={df[col].min():.2f}, max={df[col].max():.2f}")
+
     print("\n" + "=" * 60)
 
 

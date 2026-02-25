@@ -1,6 +1,6 @@
 # mlops-unit1
 
-Simple MLOps practice project.
+MLOps practice project.
 
 ## Setup
 
